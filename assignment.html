@@ -1,0 +1,124 @@
+// Part 1 Question 3
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greet User</title>
+</head>
+<body>
+    <h1 id="greeting"></h1>
+
+    <script>
+        // Function to greet the user
+        function greetUser(name) {
+            return `Hello, ${name}! Welcome to the site.`;
+        }
+
+        // Get the HTML element to display the greeting
+        const greeting = document.getElementById('greeting');
+
+        // Call the greetUser function with a sample name and display the message
+        const message = greetUser('John Doe');
+        greeting.textContent = message;
+    </script>
+</body>
+</html>
+
+// part 2 question 4
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vote Eligibility</title>
+</head>
+<body>
+    <h1 id="eligibilityMessage"></h1>
+
+    <script>
+        // Ask the user for their age
+        let age = parseInt(prompt("Please enter your age:"));
+
+        // Get the HTML element to display the eligibility message
+        const message1 = document.getElementById('eligibilityMessage');
+
+        // Check if the user is eligible to vote
+        if (age >= 18) {
+            message1.textContent = "You are eligible to vote.";
+        } else {
+            message1.textContent = "You are not eligible to vote.";
+        }
+    </script>
+</body>
+</html>
+
+// part 2 question 5
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Numbers</title>
+</head>
+<body>
+    <ol id="numberList"></ol>
+
+    <script>
+        // Get the HTML element to display the numbers
+        const numberList = document.getElementById('numberList');
+
+        // Loop to display numbers from 1 to 10
+        for (let i = 1; i <= 10; i++) {
+            // Create a new list item element
+            const listItem = document.createElement('li');
+            // Set the text content of the list item
+            listItem.textContent = i;
+            // Append the list item to the ordered list
+            numberList.appendChild(listItem);
+        }
+    </script>
+</body>
+</html>
+
+// Part 3 question 6
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Assignment</title>
+</head>
+<body>
+    <h1>JavaScript Assignment</h1>
+    <p>Learning JavaScript is fun!</p>
+    <div id="dynamic-content"></div>
+</body>
+</html>
+
+// Question 7
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Assignment</title>
+</head>
+<body>
+    <h1>JavaScript Assignment</h1>
+    <p>Learning JavaScript is fun!</p>
+    <div id="dynamic-content"></div>
+
+    <script>
+        // Change the text of the <h1> element
+        const heading = document.querySelector('h1');
+        heading.textContent = "JavaScript in Action!";
+
+        // Add a new <p> inside the dynamic-content <div>
+        const dynamicContent = document.getElementById('dynamic-content');
+        const newParagraph = document.createElement('p');
+        newParagraph.textContent = "This content was added dynamically using JavaScript.";
+        dynamicContent.appendChild(newParagraph);
+    </script>
+</body>
+</html>
